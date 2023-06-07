@@ -1,6 +1,8 @@
 package app;
 
 public class Maxwell {
-    // On Windows Shift + Alt + f
+    private Jewel Jewel;
+    // public Cidade PreviousCity;
+    
     
 }

@@ -1,46 +1,37 @@
 package app;
 
 public class Jewel {
-    private int power;
-    private int powerthreshold;
-    // private int LimitMax;
-    // private int LimitMin;
+    public int power;
+    public int powerthreshold;
+    
 
-    // get
+
     public void getpower(int power) {
         this.power = power;
     }
-    public void getpowerthreshold(int powerthreshold){
-        this.powerthreshold = powerthreshold;
 
-
-    }
-    // public void getLimitMax(int LimitMax) {
-    //     this.LimitMax = LimitMax;
-    // }
-    // public void getLimitMin(int LimitMin){
-    //     this.LimitMin = LimitMin;
-    // }
-    // set
     public int setpower(int power) {
         return power;
     }
-    public int setpowerthreshold(int powerthreshold){
-        return powerthreshold;
 
-
+    // powerthreshold = Limite de energia
+    public void getpowerthreshold(int powerthreshold) {
+        this.powerthreshold = powerthreshold;
     }
-    // public int setLimitmax(int LimitMax){
-    //     return LimitMax;
-    // }
-    // public int setlimimin(int LimitMin){
-    //     return LimitMin;
-    // }
+
+    public int setpowerthreshold(int powerthreshold) {
+        return powerthreshold;
+    }
 
     public void poderMenorQueLimiteDePoder() {
+        if (power < 0) {
+            power = 0;
+        } 
+        else if (power > 7) {
+            System.out.println("Fim de jogo");
 
-        
+        }
+
     }
-
 
 }
