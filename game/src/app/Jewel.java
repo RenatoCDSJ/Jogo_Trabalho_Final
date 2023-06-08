@@ -3,6 +3,13 @@ package app;
 public class Jewel {
     public int power;
     public int powerthreshold;
+
+
+
+    public Jewel(int powerthreshold){
+        this.powerthreshold = powerthreshold;
+
+    }
     
 
 
@@ -31,7 +38,10 @@ public class Jewel {
             System.out.println("Fim de jogo");
 
         }
+    }
 
+    public void aumentoDeEnergia(){
+        this.powerthreshold += 1;
     }
 
 }
