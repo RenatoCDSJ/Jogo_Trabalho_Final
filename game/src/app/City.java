@@ -2,49 +2,53 @@ package app;
 import java.util.ArrayList;
 
 public class City {
-    //name da cidade, a quantidade de poder que a jóia recebe
-	//O grau que o objeto vai ter no Grafo (quantas ligações)
-	//e por fim a arraylist das cidades vizinhas
+    //"name" of the city, "powerAmount" for the amount of power the gem receives
+	//The degree that the object will have on the Graph (how many links)
+	//and finally the arraylist of neighboring cities
 	private String name;
-	private int quantidadePoder;
-	private int grau;
-	private ArrayList<City> vizinhos = new ArrayList<City>();
+	private int powerAmount;
+	private int degree;
+	private ArrayList<City> neighbors = new ArrayList<City>();
 	
-	//construtor para definir as cidades e seus vizinhos
-	public City(String name, int quantidadePoder) {
+	//constructor to define cities and their neighbors
+	public City(String name, int powerAmount) {
         this.name = name;
-        this.quantidadePoder = quantidadePoder;
+        this.powerAmount = powerAmount;
     }
 	
-	//função para adicionar vizinhos
-	public void fazerVizinho (City a) {
+	//function to add neighbors
+	public void fazerNeighbors (City a) {
         if(!isVizinho(a)) {
-            vizinhos.add(a);
-            grau += 1;
+            neighbors.add(a);
+            degree += 1;
         }
     }
 	
-	//função para ver se a cidade já é vizinha
+	//function to check if the city is already neighboring
 	public boolean isVizinho (City a) {
-        for (City cidade : this.vizinhos) {
+        for (City cidade : this.neighbors) {
             if (cidade == a)
                 return true;
         }
         return false;
     }
 	
-	//função para ver os vizinhos da cidade
-	public ArrayList<City> getVizinhos(){
-        return this.vizinhos;
+	//function to check the neighbors of the city
+	public ArrayList<City> getNeighbors(){
+        return this.neighbors;
     }
 	
-	//retorna o nome da cidade e a outra retorna o poder que a cidade influencia na joia
-	public String nomeCity(){
+	//returns the name of the city and the other below returns the power that the city influences on the jewel
+	public String cityName(){
         return this.name;
     }
 	
-	public int qtdPoder(){
-        return this.quantidadePoder;
+	public int powerQtd(){
+        return this.powerAmount;
     }
-    //logo posto algo que retorna o grau
+    //returns the degree of the node City
+    public int degreeQtd(){
+        return this.degree;
+    }
+    
 }
