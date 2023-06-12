@@ -41,6 +41,7 @@ public class Jewel {
     }
 
     public void aumentoDeEnergia(){
+        
         this.powerthreshold += 1;
     }
 

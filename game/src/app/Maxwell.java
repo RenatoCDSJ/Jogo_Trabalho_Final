@@ -3,9 +3,10 @@ package app;
 import java.util.Stack;
 
 public class Maxwell {
-    private Jewel Jewel;
+    public Jewel Jewel;
     public int AmountCoins = 3;
     // amount of coins =  Quantidade de moedas
+
 
     public void getAmountCoins(int AmountCoins) {
         this.AmountCoins = AmountCoins;
@@ -16,6 +17,7 @@ public class Maxwell {
     }
 
     public Stack<String> LastCity;
+    // ultima cidade
 
     public void City() {
         LastCity = new Stack<>();
@@ -41,9 +43,12 @@ public class Maxwell {
             System.out.println("Fim de jogo");
             // Caso não haja moedas restantes
         }
+
     }
     public void ticket() {
         // passagem para a proxima cidade
+       
         this.AmountCoins--;
+        
     }
 }
