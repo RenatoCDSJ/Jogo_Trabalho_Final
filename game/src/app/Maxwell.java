@@ -2,9 +2,12 @@ package app;
 
 
 public class Maxwell {
+
     public Jewel Jewel;
     public int AmountCoins = 3;
+
     // amount of coins =  Quantidade de moedas
+    public String currentCity;
 
 
     public void getAmountCoins(int AmountCoins) {
@@ -31,8 +34,11 @@ public class Maxwell {
         this.AmountCoins--;
         
     }
-    public String toString(){
-        return 
-        
+    public void addCity(String city) {
+        currentCity = city;
+    }
+
+    public String toString() {
+        return "Cidade atual: " + currentCity;
     }
 }

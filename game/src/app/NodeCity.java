@@ -1,14 +1,17 @@
 package app;
 
 public class NodeCity {
-    private Node head;
-    private Node tail;
+    // head
+    // tail
+    private Node CurrentCity;
+    private Node LastCity;
 
     // no que armazenda cidades e mostra a ultima visitada
+    
 
     public NodeCity() {
-        head = null;
-        tail = null;
+        CurrentCity = null;
+        LastCity= null;
     }
 
     private class Node {
@@ -24,20 +27,22 @@ public class NodeCity {
     public void addCity(String city) {
         Node newNode = new Node(city);
 
-        if (head == null) {
-            head = newNode;
-            tail = newNode;
+        if ( CurrentCity == null) {
+             CurrentCity = newNode;
+            LastCity = newNode;
         } else {
-            tail.next = newNode;
-            tail = newNode;
+            LastCity.next = newNode;
+            LastCity = newNode;
         }
     }
+// funçao que mostra a ultima cidade que foi adcionada
+// function that shows the last city that was added
 
     public void whereDidItComeFrom() {
-        if (head == null) {
+        if ( CurrentCity == null) {
             System.out.println("Nenhuma cidade foi visitada ainda.");
         } else {
-            Node currentNode = tail;
+            Node currentNode = LastCity;
             System.out.println("Última cidade visitada: " + currentNode.city);
         }
     }
