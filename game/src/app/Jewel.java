@@ -11,8 +11,6 @@ public class Jewel {
 
     }
     
-
-
     public void getpower(int power) {
         this.power = power;
     }
@@ -30,6 +28,8 @@ public class Jewel {
         return powerthreshold;
     }
 
+
+    
     public void poderMenorQueLimiteDePoder() {
         if (power < 0) {
             power = 0;

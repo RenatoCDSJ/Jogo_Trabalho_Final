@@ -1,6 +1,5 @@
 package app;
 
-import java.util.Stack;
 
 public class Maxwell {
     public Jewel Jewel;
@@ -15,25 +14,6 @@ public class Maxwell {
     public int setAmountCoins(int AmountCoins) {
         return AmountCoins;
     }
-
-    public Stack<String> LastCity;
-    // ultima cidade
-
-    public void City() {
-        LastCity = new Stack<>();
-    }
-
-    public void WhereDidItComeFrom() {
-        // metodo de onde vem: que retorna a ultima cidade de onde Max veio
-        if (LastCity.isEmpty()) {
-            System.out.println("Nenhuma cidade foi visitada ainda.");
-
-        } else {
-           System.out.println("Ultima cidade:" + LastCity.peek());
-
-        }
-    }
-
     public void CurrencyFlow() {
         // Fluxo de moedas
         if (AmountCoins > 0) {
@@ -47,8 +27,12 @@ public class Maxwell {
     }
     public void ticket() {
         // passagem para a proxima cidade
-       
+        // Ticket to the next city
         this.AmountCoins--;
+        
+    }
+    public String toString(){
+        return 
         
     }
 }
