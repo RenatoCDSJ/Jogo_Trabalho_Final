@@ -16,14 +16,21 @@ public class NodeTree {
     }
     //recives the created node and calls the function insertNode and reset the root
     private void insert(int index,Node<CDT> node){
-        root = insetNode(root, index, node);
+        root = insertNode(root, index, node);
 
     }
 
-    private Node<CDT> insetNode(Node<CDT> current,int index, Node<CDT> node){
+    private Node<CDT> insertNode(Node<CDT> current,int index, Node<CDT> node){
         //if current is null put node in place
         if(current == null){
             return node;
+        }
+        //if index greater than index current go to right node
+        if(index > current.getIndex()){
+            insertNode(current.right, index, node);
+        }
+        else if(index < current.getIndex()){
+            insertNode(current.left, index, node);
         }
         return current;
     }
