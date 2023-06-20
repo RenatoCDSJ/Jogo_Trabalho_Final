@@ -1,6 +1,7 @@
 package app;
 
 public class NodeCity {
+
     // head
     // tail
     private Node CurrentCity;
@@ -19,7 +20,7 @@ public class NodeCity {
         Node next;
 
         public Node(String city) {
-            this.city = city;
+            this.city = "cidade1";
             this.next = null;
         }
     }
@@ -30,7 +31,8 @@ public class NodeCity {
         if ( CurrentCity == null) {
              CurrentCity = newNode;
             LastCity = newNode;
-        } else {
+        } 
+        else {
             LastCity.next = newNode;
             LastCity = newNode;
         }
@@ -41,7 +43,8 @@ public class NodeCity {
     public void whereDidItComeFrom() {
         if ( CurrentCity == null) {
             System.out.println("Nenhuma cidade foi visitada ainda.");
-        } else {
+        } 
+        else {
             Node currentNode = LastCity;
             System.out.println("Última cidade visitada: " + currentNode.city);
         }

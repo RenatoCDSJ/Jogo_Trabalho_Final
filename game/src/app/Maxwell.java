@@ -4,10 +4,15 @@ package app;
 public class Maxwell {
 
     public Jewel Jewel;
-    public int AmountCoins = 3;
-
-    // amount of coins =  Quantidade de moedas
+    public int Coins;
+    public int AmountCoins ; // amount of coins =  Quantidade de moedas
     public String currentCity;
+
+// this is Maxwell
+
+    public Maxwell(int AmountCoins){
+        this.AmountCoins = 3;
+    }
 
 
     public void getAmountCoins(int AmountCoins) {
@@ -22,11 +27,11 @@ public class Maxwell {
         if (AmountCoins > 0) {
 
             System.out.println("Quantidade atual de moedas: " + AmountCoins);
-        } else {
+        }
+         else {
             System.out.println("Fim de jogo");
             // Caso não haja moedas restantes
-        }
-
+        } 
     }
     public void ticket() {
         // passagem para a proxima cidade
@@ -42,3 +47,5 @@ public class Maxwell {
         return "Cidade atual: " + currentCity;
     }
 }
+
+

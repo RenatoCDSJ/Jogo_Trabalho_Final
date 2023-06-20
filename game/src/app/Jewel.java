@@ -6,8 +6,9 @@ public class Jewel {
 
 
 
-    public Jewel(int powerthreshold){
+    public Jewel(int powerthreshold, int power){
         this.powerthreshold = powerthreshold;
+        this.power = power;
 
     }
     
@@ -29,8 +30,7 @@ public class Jewel {
     }
 
 
-    
-    public void poderMenorQueLimiteDePoder() {
+    public void poderMenorQueLimiteDePoder(int power) {
         if (power < 0) {
             power = 0;
         } 
@@ -41,6 +41,7 @@ public class Jewel {
     }
 
     public void aumentoDeEnergia(){
+        // cotrolador do limiar da joia
         
         this.powerthreshold += 1;
     }
