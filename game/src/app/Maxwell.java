@@ -22,6 +22,7 @@ public class Maxwell {
     public int setAmountCoins(int AmountCoins) {
         return AmountCoins;
     }
+    
     public void CurrencyFlow() {
         // Fluxo de moedas
         if (AmountCoins > 0) {
@@ -29,7 +30,7 @@ public class Maxwell {
             System.out.println("Quantidade atual de moedas: " + AmountCoins);
         }
          else {
-            System.out.println("Fim de jogo");
+            System.out.println("Game over");
             // Caso não haja moedas restantes
         } 
     }
