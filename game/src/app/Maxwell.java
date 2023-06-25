@@ -4,12 +4,14 @@ public class Maxwell {
     public int AmountCoins; // amount of coins = Quantidade de moedas
     public int powerJewel;
     public int powerthreshold;
+    private int CurrentCity;
 
     // this is playerMaxwell
-    public Maxwell(int AmountCoins, int powerJewel, int powerthreshold) {
+    public Maxwell(int AmountCoins, int powerJewel, int powerthreshold, int CurrentCity) {
         this.AmountCoins = 3;
         this.powerJewel = powerJewel;
         this.powerthreshold = powerthreshold;
+        this.CurrentCity = 0;
     }
 
     // Coins
@@ -28,6 +30,14 @@ public class Maxwell {
 
     public int setpowerJewl(int powerJewel) {
         return powerJewel;
+    }
+
+    public void getCurrentCity(int CurrentCity){
+        this.CurrentCity = CurrentCity;
+
+    }
+    public int setCurrentCity(int CurrentCity){
+        return CurrentCity;
     }
 
     // powerthreshold [Limite de energia]
