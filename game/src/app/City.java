@@ -2,53 +2,61 @@ package app;
 import java.util.ArrayList;
 
 public class City {
-    //"name" of the city, "powerAmount" for the amount of power the gem receives
+	//"name" of the city, "powerAmount" for the amount of power the gem receives
 	//The degree that the object will have on the Graph (how many links)
 	//and finally the arraylist of neighboring cities
 	private String name;
 	private int powerAmount;
 	private int degree;
-	private ArrayList<City> neighbors = new ArrayList<City>();
+	public ArrayList<City> neighbors = new ArrayList<City>();
 	
 	//constructor to define cities and their neighbors
 	public City(String name, int powerAmount) {
-        this.name = name;
-        this.powerAmount = powerAmount;
-    }
-	
+		this.name = name;
+		this.powerAmount = powerAmount;
+	}
+
 	//function to add neighbors
 	public void makeNeighbors (City a) {
-        if(!isVizinho(a)) {
-            neighbors.add(a);
-            degree += 1;
-        }
-    }
-	
+		if(!isVizinho(a)) {
+			neighbors.add(a);
+			degree += 1;
+		}
+	}
+
 	//function to check if the city is already neighboring
 	public boolean isVizinho (City a) {
-        for (City city : this.neighbors) {
-            if (city == a)
-                return true;
-        }
-        return false;
-    }
-	
+		for (City city : this.neighbors) {
+			if (city == a)
+				return true;
+		}
+		return false;
+	}
+
 	//function to check the neighbors of the city
 	public ArrayList<City> getNeighbors(){
-        return this.neighbors;
-    }
-	
+		return this.neighbors;
+	}
+
 	//returns the name of the city and the other below returns the power that the city influences on the jewel
 	public String cityName(){
-        return this.name;
-    }
-	
+		return this.name;
+	}
+
 	public int powerQtd(){
-        return this.powerAmount;
-    }
-    //returns the degree of the node City
-    public int degreeQtd(){
-        return this.degree;
-    }
-    
+		return this.powerAmount;
+	}
+	//returns the degree of the node City
+	public int degreeQtd(){
+		return this.degree;
+	}
+
+	
+	//Below... The ToSrting, not using now but someday it will rise again
+	/*@Override
+	public String toString() {
+		return "City [neighbors=" + neighbors + "]";
+	}
+	*/
+	
 }
