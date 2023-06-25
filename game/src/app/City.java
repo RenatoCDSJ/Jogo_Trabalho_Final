@@ -17,7 +17,7 @@ public class City {
     }
 	
 	//function to add neighbors
-	public void fazerNeighbors (City a) {
+	public void makeNeighbors (City a) {
         if(!isVizinho(a)) {
             neighbors.add(a);
             degree += 1;
@@ -26,8 +26,8 @@ public class City {
 	
 	//function to check if the city is already neighboring
 	public boolean isVizinho (City a) {
-        for (City cidade : this.neighbors) {
-            if (cidade == a)
+        for (City city : this.neighbors) {
+            if (city == a)
                 return true;
         }
         return false;
