@@ -57,7 +57,6 @@ public class Maxwell {
             // Caso não haja moedas restantes
         }
     }
-
     public void nextCity() {
         // Ticket to the next city
         this.AmountCoins--;
