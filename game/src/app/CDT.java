@@ -34,5 +34,10 @@ public class CDT {
     public void setTrade(boolean trade) {
         this.trade = trade;
     }
+
+    @Override
+    public String toString() {
+        return "CDT [coin=" + coin + ", distance=" + distance + ", trade=" + trade + "]";
+    }
     
 }
