@@ -5,22 +5,23 @@ import java.util.Scanner;
 public class Merchant {
     //talks of the merchant
     //the merchant will need have in the parameters the coins of Maxwel
-    public void talk(){
+    public CJ talk(int coin){
 
-        System.out.println("Quantas moedas de transporte você tem?");//get coins of Maxwel
-
-        System.out.println("Deseja trocar suas moedas por limiar na joia?");//get the anwser of player
+        System.out.println("Deseja trocar suas moedas por limiar da joia?");//get the anwser of player
         int trade = trade();
-        System.out.println("De onde você vem, e para onde você vai?");//get the TesteGraph code to choose the city
         
-
+        Tree tree = new Tree();
+        CJ cj = tree.TreeMap(new CDT(coin, 1, trade));
+        return cj;
     }
     public int trade(){
         Scanner scn = new Scanner(System.in);
         String anwser = scn.nextLine();
         if(anwser.equals("s")){
+            scn.close();
             return 1;
         }else if(anwser.equals("n")){
+            scn.close();
             return 0;
         }else{
             trade();
