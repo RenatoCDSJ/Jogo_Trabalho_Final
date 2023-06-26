@@ -9,8 +9,11 @@ public class Quest {
     private String mission;
 
     public CJ acceptMission(){
+        if(complete == false){
         accepted = true;
         return rewardForAcceptingMission;
+        }
+        return null;
     }
     public CJ cancelMission(){
         accepted =false;
