@@ -4,12 +4,17 @@ import java.util.InputMismatchException;
 
 public class TesteGraph {
     public static void main(String[] args) {
+        Graphtools tools = new Graphtools();
+        Maxwell max = new Maxwell();
+        tools.descocamento(max);
+    }
+
+
+    public void descocamento(int b){
         CityGraph cidadinha = new CityGraph();
 		Scanner scanner = new Scanner(System.in);
 		boolean sair = false;
-
-		System.out.print("Digite o numero da Cidade: ");
-        int numero = scanner.nextInt();
+        int numero = b;
 
 		while(!sair){
 			System.out.println("======================");
@@ -37,5 +42,9 @@ public class TesteGraph {
 		
 		
 		scanner.close();
+
     }
+
+
 }
+

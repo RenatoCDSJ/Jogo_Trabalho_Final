@@ -8,52 +8,52 @@ public class Maxwell {
     private boolean Alive = true;
 
     // this is playerMaxwell
-    public Maxwell(int AmountCoins, int PowerJewel, int Powerthreshold, int CurrentCity, boolean Alive) {
+    public Maxwell() {
         this.AmountCoins = 3;
-        this.PowerJewel = PowerJewel;
-        this.Powerthreshold = Powerthreshold;
+        this.PowerJewel = 0;
+        this.Powerthreshold = 7;
         this.CurrentCity = 0;
         this.Alive = true;
     }
 
     // AmountCoins
-    public void getAmountCoins(int AmountCoins) {
+    public void setAmountCoins(int AmountCoins) {
         this.AmountCoins = AmountCoins;
     }
-    public int setAmountCoins(int AmountCoins) {
+    public int getAmountCoins() {
         return AmountCoins;
     }
 
     // Powerjewel [joia]
-    public void getPower(int PowerJewel) {
+    public void setPower(int PowerJewel) {
         this.PowerJewel = PowerJewel;
     }
-    public int setPowerJewl(int PowerJewel) {
-        return PowerJewel;
+    public int getPowerJewl() {
+        return this.PowerJewel;
     }
 
     // CurrentCity 
-    public void getCurrentCity(int CurrentCity){
+    public void setCurrentCity(int CurrentCity){
         this.CurrentCity = CurrentCity;
     }
-    public int setCurrentCity(int CurrentCity){
-        return CurrentCity;
+    public int getCurrentCity(){
+        return this.CurrentCity;
     }
 
     // powerthreshold [Limite de energia]
-    public void getPowerthreshold(int Powerthreshold) {
+    public void setPowerthreshold(int Powerthreshold) {
         this.Powerthreshold = Powerthreshold;
     }
-    public int setPowerthreshold(int Powerthreshold) {
-        return Powerthreshold;
+    public int getPowerthreshold() {
+        return this.Powerthreshold;
     }
 
     // Alive
-    public void getAlive(boolean Alive){
+    public void setAlive(boolean Alive){
         this.Alive = Alive;
     }
-    public boolean setAlive(boolean Alive){
-        return Alive;
+    public boolean getAlive(){
+        return this.Alive;
     }
    
    
