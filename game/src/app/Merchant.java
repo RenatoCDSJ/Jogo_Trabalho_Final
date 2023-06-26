@@ -25,6 +25,7 @@ public class Merchant {
         }else{
             trade();
         }
+        scn.close();
         return 0;
     }
 }
