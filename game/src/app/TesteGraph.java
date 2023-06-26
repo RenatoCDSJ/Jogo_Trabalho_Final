@@ -22,8 +22,10 @@ public class TesteGraph {
                 int escolha = scanner.nextInt();
                 if (escolha >= 1 && escolha <= cidadinha.qtdneighbors(numero)) {
                     //"numero" is the current city 
+                    //maxwell.setcityatual()
+                    //maxwell.cidadeatual()
 					numero = cidadinha.specifcNeighb(numero,escolha-1);
-                    //sair = true;
+                    sair = true;
                 } else {
                     System.out.println("Escolha inválida. Tente novamente.\n\n\n");
                 }
