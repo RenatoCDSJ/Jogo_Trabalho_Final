@@ -81,5 +81,11 @@ public class Quest {
     public void setDestinationCity(int destinationCity) {
         this.destinationCity = destinationCity;
     }
+    @Override
+    public String toString() {
+        return "Quest [accepted=" + accepted + ", complete=" + complete + ", rewardForAcceptingMission="
+                + rewardForAcceptingMission + ", reward=" + reward + ", mission=" + mission + ", originCity="
+                + originCity + ", destinationCity=" + destinationCity + "]";
+    }
     
 }
