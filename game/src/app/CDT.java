@@ -1,37 +1,38 @@
 package app;
 //CDT(CoinDistanceTrade)
+//this class contains data of coin, distance and trade
 public class CDT {
-    private int coin;
-    private int distance;
-    private boolean trade;
+    private Integer coin;
+    private Integer distance;
+    private Integer trade;
 
-    public CDT(int coin, int distance, boolean trade){
+    public CDT(Integer coin, Integer distance, Integer trade){
         this.coin = coin;
         this.distance = distance;
         this.trade = trade;
     }
 
-    public int getCoin() {
+    public Integer getCoin() {
         return coin;
     }
 
-    public void setCoin(int coin) {
+    public void setCoin(Integer coin) {
         this.coin = coin;
     }
 
-    public int getDistance() {
+    public Integer getDistance() {
         return distance;
     }
 
-    public void setDistance(int distance) {
+    public void setDistance(Integer distance) {
         this.distance = distance;
     }
-
-    public boolean isTrade() {
+    
+    public Integer getTrade() {
         return trade;
     }
 
-    public void setTrade(boolean trade) {
+    public void setTrade(Integer trade) {
         this.trade = trade;
     }
 
@@ -39,5 +40,5 @@ public class CDT {
     public String toString() {
         return "CDT [coin=" + coin + ", distance=" + distance + ", trade=" + trade + "]";
     }
-    
+
 }
