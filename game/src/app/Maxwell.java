@@ -2,73 +2,76 @@ package app;
 
 public class Maxwell {
     private int AmountCoins; // amount of coins = Quantidade de moedas
-    private int powerJewel;
-    private int powerthreshold;
+    private int PowerJewel;
+    private int Powerthreshold;
     private int CurrentCity;
+    private boolean Alive = true;
 
     // this is playerMaxwell
-    public Maxwell(int AmountCoins, int powerJewel, int powerthreshold, int CurrentCity) {
+    public Maxwell(int AmountCoins, int PowerJewel, int Powerthreshold, int CurrentCity, boolean Alive) {
         this.AmountCoins = 3;
-        this.powerJewel = powerJewel;
-        this.powerthreshold = powerthreshold;
+        this.PowerJewel = PowerJewel;
+        this.Powerthreshold = Powerthreshold;
         this.CurrentCity = 0;
+        this.Alive = true;
     }
 
-    // Coins
+    // AmountCoins
     public void getAmountCoins(int AmountCoins) {
         this.AmountCoins = AmountCoins;
     }
-
     public int setAmountCoins(int AmountCoins) {
         return AmountCoins;
     }
 
-    // jewel [joia]
-    public void getpower(int powerJewel) {
-        this.powerJewel = powerJewel;
+    // Powerjewel [joia]
+    public void getPower(int PowerJewel) {
+        this.PowerJewel = PowerJewel;
+    }
+    public int setPowerJewl(int PowerJewel) {
+        return PowerJewel;
     }
 
-    public int setpowerJewl(int powerJewel) {
-        return powerJewel;
-    }
-
+    // CurrentCity 
     public void getCurrentCity(int CurrentCity){
         this.CurrentCity = CurrentCity;
-
     }
     public int setCurrentCity(int CurrentCity){
         return CurrentCity;
     }
 
     // powerthreshold [Limite de energia]
-    public void getpowerthreshold(int powerthreshold) {
-        this.powerthreshold = powerthreshold;
+    public void getPowerthreshold(int Powerthreshold) {
+        this.Powerthreshold = Powerthreshold;
+    }
+    public int setPowerthreshold(int Powerthreshold) {
+        return Powerthreshold;
     }
 
-    public int setpowerthreshold(int powerthreshold) {
-        return powerthreshold;
+    // Alive
+    public void getAlive(boolean Alive){
+        this.Alive = Alive;
     }
-    // Jewel
-    // Metodos
-    // esse metodo faz com que, se o poder da joia passar do limite o game acaba
-    public void powerlessthanPowerLimit(int powerJewel, int powerthreshold) {
-        if (powerJewel < 0) {
-            powerJewel = 0;
-        } else if (powerJewel > powerthreshold) {
-            System.out.println("O poder da joia do poder foi de mais para o pobre Maxwell 'Game over'");
+    public boolean setAlive(boolean Alive){
+        return Alive;
+    }
+   
+   
+    public void PowerlessthanPowerLimit(int PowerJewel, int Powerthreshold, boolean Alive) {
+        if (PowerJewel < 0) {
+            PowerJewel = 0;
+        } else if (PowerJewel > Powerthreshold) {
+          Alive = false;
         }
     }
+    // this method means that, if the power of the jewel exceeds the limit, the game ends
     public void CurrencyFlow() {
-        // Fluxo de moedas
+        // CurrencyFlow
         if (AmountCoins > 0) {
             System.out.println("Quantidade atual de moedas: " + AmountCoins);
         } else {
-            System.out.println("Maxwell nao possui moedas Game over");
-            // Caso não haja moedas restantes
+            Alive = false;
+            //If there are no coins left
         }
-    }
-    public void nextCity() {
-        // Ticket to the next city
-        this.AmountCoins--;
     }
 }
