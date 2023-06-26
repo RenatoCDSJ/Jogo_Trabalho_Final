@@ -7,6 +7,8 @@ public class Quest {
     private CJ rewardForAcceptingMission;
     private CJ reward;
     private String mission;
+    private int originCity;
+    private int destinationCity;
 
     public CJ acceptMission(){
         if(complete == false){
@@ -28,11 +30,13 @@ public class Quest {
     public void mission(){
         System.out.println(mission);
     }
-    public Quest(CJ rewardForAcceptingMission, CJ reward, String mission) {
+    public Quest(CJ rewardForAcceptingMission, CJ reward, int originCity, int destinationCity, String mission) {
         this.accepted = false;
         this.complete = false;
         this.rewardForAcceptingMission = rewardForAcceptingMission;
         this.reward = reward;
+        this.originCity = originCity;
+        this.destinationCity = destinationCity;
         this.mission = mission;
     }
     public boolean isAccepted() {
@@ -64,6 +68,18 @@ public class Quest {
     }
     public void setMission(String mission) {
         this.mission = mission;
+    }
+    public int getOriginCity() {
+        return originCity;
+    }
+    public void setOriginCity(int originCity) {
+        this.originCity = originCity;
+    }
+    public int getDestinationCity() {
+        return destinationCity;
+    }
+    public void setDestinationCity(int destinationCity) {
+        this.destinationCity = destinationCity;
     }
     
 }

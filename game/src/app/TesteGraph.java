@@ -21,6 +21,7 @@ public class TesteGraph {
 			try {
                 int escolha = scanner.nextInt();
                 if (escolha >= 1 && escolha <= cidadinha.qtdneighbors(numero)) {
+                    //"numero" is the current city 
 					numero = cidadinha.specifcNeighb(numero,escolha-1);
                     //sair = true;
                 } else {
