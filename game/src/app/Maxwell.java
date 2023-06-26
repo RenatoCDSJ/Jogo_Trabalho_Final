@@ -1,9 +1,9 @@
 package app;
 
 public class Maxwell {
-    public int AmountCoins; // amount of coins = Quantidade de moedas
-    public int powerJewel;
-    public int powerthreshold;
+    private int AmountCoins; // amount of coins = Quantidade de moedas
+    private int powerJewel;
+    private int powerthreshold;
     private int CurrentCity;
 
     // this is playerMaxwell
