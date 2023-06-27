@@ -109,6 +109,45 @@ public class Dialogues {
 
     }
 
+    public void dialogoFinal(Maxwell max){
+        if(max.getAmountCoins() >= 10){ //aqui Maxwell é condecorado Rei
+            System.out.println("Maxwell Chega em Nargumun e...");
+            System.out.println("Rapidamente a Joia é recolhida");
+            System.out.println("Para ser estabilizada pelos magos do Reino");
+            System.out.println("Maxwell juntou tanto dinheiro que o Rei");
+            System.out.println("Se ajoelha, proclamando:");
+            System.out.println("--Rei MAXWELL!!");
+            System.out.println("O Reino entra em Alegria");
+            System.out.println("E Maxell, Maxwell vive bem pelo resto da vida como novo Rei.");
+            System.out.println("FIM");
+            System.out.println("[Final Bom 1]");
+        }else if(max.getAmountCoins() < 10 && max.getAmountCoins() >= 4){ //Aqui ele é consecorado lorde
+            System.out.println("Maxwell Chega em Nargumun e...");
+            System.out.println("Rapidamente a Joia é recolhida");
+            System.out.println("Para ser estabilizada pelos magos do Reino");
+            System.out.println("Maxwell juntou tanto dinheiro que os Nobres");
+            System.out.println("Se ajoelham, proclamando:");
+            System.out.println("--É UM DOS NOSSOS");
+            System.out.println("O Reino entra em Alegria");
+            System.out.println("E Maxell, Maxwell vive bem pelo resto da vida como Nobre.");
+            System.out.println("FIM");
+            System.out.println("[Final Bom 2]");
+        }else{ //Aqui ele vira servo (muito ruim)
+            System.out.println("Maxwell Chega em Nargumun e...");
+            System.out.println("Rapidamente a Joia é recolhida");
+            System.out.println("Para ser estabilizada pelos magos do Reino");
+            System.out.println("Maxwell juntou tão pouco dinheiro que o Rei");
+            System.out.println("olha com desgosto, proclamando:");
+            System.out.println("-- Entreguem uma Roupa a esse Plebeu!");
+            System.out.println("O Reino entra em Alegria");
+            System.out.println("E Maxell, Maxwell vive pelo resto da vida como um servo da Coroa.");
+            System.out.println("Não é legal, mas ao menos o Reino Floresce!");
+            System.out.println("FIM");
+            System.out.println("[Final Ruim 1]");
+        }
+
+    }
+
     // public static void main(String[] args) {
     //     Dialogues dia = new Dialogues();
     //     dia.inicio();

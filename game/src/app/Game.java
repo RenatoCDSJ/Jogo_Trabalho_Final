@@ -43,9 +43,19 @@ public class Game {
                     gt.descocamento(max); //mudança de cidade
                     merchant.talk(max); //mercador
                     if(max.getAmountCoins() > 0 && max.getPowerJewl() < max.getPowerthreshold()){
-                        quests.cityMission(max); //missão
-                        dialogues.clearTerminal(); //limpar terminal
-                        //olhar se a joia ta negativa e transformar em 0
+                        if(max.getCurrentCity() == 16){
+                            dialogues.dialogoFinal(max);
+                            morreu = true;
+                            //creditos da ultima cidade
+                        }else{
+                            quests.cityMission(max); //missão
+                            dialogues.clearTerminal(); //limpar terminal
+                            //olhar se a joia ta negativa e transformar em 0
+                            if(max.getPowerJewl() < 0){
+                                max.setPower(0);
+                            }
+                        }
+                        
                     }else{
                         System.out.println("Maxwell Morreu, fim de jogo");
                         morreu = true;
