@@ -42,7 +42,7 @@ public class Game {
                 }else if(escolha == 3){
                     gt.descocamento(max); //mudança de cidade
                     merchant.talk(max); //mercador
-
+                    quests.cityMission(max); //missão
                     dialogues.clearTerminal(); //limpar terminal
                 }else {
                     System.out.println("Escolha inválida. Tente novamente.\n\n\n");
