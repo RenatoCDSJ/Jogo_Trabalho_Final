@@ -13,6 +13,8 @@ public class Game {
         boolean morreu = false; //se ficar true significa que foi de F
         Dialogues dialogues = new Dialogues();
         Graphtools gt = new Graphtools();
+        Merchant merchant = new Merchant();
+        Quests quests = new Quests();
         //System.out.println(quests.list.get(0));
         //loop
         //show the history
@@ -36,10 +38,10 @@ public class Game {
                 if (escolha == 1) {
 					dialogues.showMap();
                 }else if(escolha == 2){
-                    //ver missao
+                    quests.showQuest(max); //ver missao
                 }else if(escolha == 3){
                     gt.descocamento(max); //mudança de cidade
-                    //mercador
+                    merchant.talk(max); //mercador
 
                     dialogues.clearTerminal(); //limpar terminal
                 }else {
