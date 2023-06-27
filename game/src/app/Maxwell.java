@@ -74,4 +74,17 @@ public class Maxwell {
             //If there are no coins left
         }
     }
+
+    public void getAll(){
+        CityGraph cg = new CityGraph();
+        System.out.println("======================");
+        System.out.println("Inventário do Mawell ");
+        System.out.println("======================");
+        System.out.println("Cidade Atual: ");
+        cg.cityName(this.CurrentCity);
+        System.out.println("Poder da Jóia: "+ this.PowerJewel);
+        System.out.println("Limiar da Jóia: "+ this.Powerthreshold);
+        System.out.println("Moedas: "+ this.AmountCoins);
+        System.out.println("======================");
+    }
 }

@@ -36,6 +36,11 @@ public class Graphtools {
 	public int specifcNeighb(City z,int a){
 		return z.neighborsPosition.get(a);
 	}
+
+	public int powerqt(City z){
+		return z.powerQtd();
+	}
+
     
     public void descocamento(Maxwell m){
         CityGraph cidadinha = new CityGraph();
@@ -57,8 +62,14 @@ public class Graphtools {
 			try {
                 int escolha = scanner.nextInt();
                 if (escolha >= 1 && escolha <= cidadinha.qtdneighbors(numero)) {
-                    //"numero" is the current city 
-					m.setCurrentCity(escolha);
+                    //"numero" is the current city
+					int newescolha = cidadinha.specifcNeighb(numero,escolha-1); 
+					m.setCurrentCity(newescolha);
+					int poder = cidadinha.powerj(newescolha);
+					int poderfinal = m.getPowerJewl() + poder;
+					m.setPower(poderfinal);
+					int newcoins = m.getAmountCoins() - 1;
+					m.setAmountCoins(newcoins);
 					//numero = cidadinha.specifcNeighb(numero,escolha-1);
                     sair = true;
                 } else {
@@ -73,7 +84,7 @@ public class Graphtools {
 		}
 		
 		
-		scanner.close();
+		
 
     }
     

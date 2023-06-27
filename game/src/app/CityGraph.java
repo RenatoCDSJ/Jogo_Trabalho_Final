@@ -80,12 +80,16 @@ public class CityGraph {
 		cgh.cityName(neighborhood.get(a));
 	}
 	
+	
 	public void neighbors(int a) {
 		cgh.vizinhos(neighborhood.get(a));
 	}
 	
 	public int qtdneighbors(int a) {
 		return cgh.qtdvizinhos(neighborhood.get(a));
+	}
+	public int powerj(int a){
+		return cgh.powerqt(neighborhood.get(a));
 	}
 	
 	public int specifcNeighb(int a,int b){

@@ -91,6 +91,24 @@ public class Dialogues {
         dia.inicio();
     }
 
+    public void showMap(){
+        ImageIcon image3 = new ImageIcon(Dialogues.class.getResource("Images/maapa.png"));
+        JLabel label3 = new JLabel();
+        label3.setIcon(image3);
+        label3.setHorizontalAlignment(JLabel.CENTER);
+
+        JFrame frame3 = new JFrame();
+        frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame3.setSize(1600, 800);
+        frame3.setVisible(true);
+        frame3.add(label3);
+        System.out.println("[digite qualquer coisa para voltar]");
+        ph = scan.nextLine();
+        frame3.dispose();
+        clearTerminal();
+
+    }
+
     // public static void main(String[] args) {
     //     Dialogues dia = new Dialogues();
     //     dia.inicio();
