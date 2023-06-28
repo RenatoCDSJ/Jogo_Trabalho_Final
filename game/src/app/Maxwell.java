@@ -78,7 +78,7 @@ public class Maxwell {
     public void getAll(){
         CityGraph cg = new CityGraph();
         System.out.println("======================");
-        System.out.println("Inventário do Mawell ");
+        System.out.println("Inventário do Maxwell ");
         System.out.println("======================");
         System.out.println("Cidade Atual: ");
         cg.cityName(this.CurrentCity);
