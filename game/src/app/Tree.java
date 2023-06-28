@@ -76,7 +76,7 @@ public class Tree {
     private static CJ reward(Integer i){
         ArrayList<CJ> reward = new ArrayList<>();
         reward.add(0, new CJ(-1, 1));
-        reward.add(1, new CJ(2, 0));//Trocado coin com a "esta"
+        reward.add(1, new CJ(1, 0));//Trocado coin com a "esta"
         reward.add(2, new CJ(-1, 2));
         reward.add(3, new CJ(-1, 0));//"esta"
         reward.add(4, new CJ(-3, 2));

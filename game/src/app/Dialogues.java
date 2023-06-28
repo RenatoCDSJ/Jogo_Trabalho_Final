@@ -71,6 +71,8 @@ public class Dialogues {
         System.out.println("(Nada Manipulado)");
         System.out.println("Você que irá levar esta jóia Até Nargumun");
         System.out.println("Lá eles possuem magia avançada para estabilizar a Joia!");
+        System.out.println("Nõ deixe o poder da Joia superar o Limiar!");
+        System.out.println("Você pode encontrar missões nas cidades!");
         System.out.println("Boa Sorte!");
         System.out.println("[digite qualquer coisa para continuar]");
         ph = scan.nextLine();
