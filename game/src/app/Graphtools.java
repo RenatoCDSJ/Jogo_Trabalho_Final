@@ -35,7 +35,15 @@ public class Graphtools {
 	}
     
     
-    
+    public int fatorial(int num){
+		int total = 0;
+		if(num > 0){
+			total = num * fatorial(num - 1);
+		}else{
+			total = 1;
+		}
+		return total;
+	}
 	
 	
 	
